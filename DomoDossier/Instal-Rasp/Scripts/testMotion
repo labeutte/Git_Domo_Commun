@@ -1,0 +1,21 @@
+#!/bin/bash
+
+function check_appli {
+    ps aux | grep -o  "$1"
+}
+
+Result=`check_appli motion`
+#long de la chaine
+lg=${#Result}
+
+if [ $lg -lt 12 ]
+then
+	if pidof motion ; then
+		#je tue l'éventuel motion
+		sudo kill $(pgrep motion)
+		#echo "motion tuée">>/home/pi/motion.log
+	fi
+	#je relance 
+   	echo "$(date) On relance motion">>/home/pi/appli.log
+	sudo /usr/bin/motion
+fi

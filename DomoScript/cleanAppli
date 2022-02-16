@@ -1,0 +1,4 @@
+#!/bin/bash
+# On efface les images anterieures a 32 jours
+find /home/pi/Images/*.jpg -type f -mtime +32 -exec /bin/rm -f {} \;
+find /home/pi/Images/*.JPG -type f -mtime +32 -exec /bin/rm -f {} \;

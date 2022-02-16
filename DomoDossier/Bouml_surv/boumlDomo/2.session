@@ -1,0 +1,13 @@
+window_sizes 1280 961 300 975 811 104
+
+diagrams
+  active  deploymentdiagram_ref 128002 // diagDeploie
+    975 809 100 A4 0 0
+end
+show_stereotypes
+selected 
+package_ref 129 // boumlDomo
+open
+  deploymentview_ref 128002 // vueDeploie
+end
+end

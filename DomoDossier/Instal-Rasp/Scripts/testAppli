@@ -1,0 +1,27 @@
+#!/bin/bash
+
+function check_appli {
+    ps aux | grep -o  "$1"
+}
+
+Result=`check_appli appli`
+#long de la chaine
+lg=${#Result}
+
+if [ $lg -lt 15 ]
+then
+	if pidof appli ; then
+		#je tue l'éventuel appli (2)
+		sudo kill $(pgrep appli)
+		sudo kill $(pgrep appli)
+		#echo "appli tuée">>/home/pi/appli.log
+	fi
+	#je relance 
+   	echo "$(date) On relance appli">>/home/pi/appli.log
+	#lxterminal -e sudo /home/pi/trivy/appli  2>>/home/pi/appli.log
+	#sudo /home/pi/trivy/appli  1>>/home/pi/appli.run 2>>/home/pi/domot.err
+	sudo /home/pi/trivy/appli
+#else
+#	echo "lg = $lg ">>/home/pi/appli.err
+#  	echo "$(date) appli est UP">>/home/pi/appli.err
+fi

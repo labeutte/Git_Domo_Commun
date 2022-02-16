@@ -1,0 +1,21 @@
+#!/bin/bash
+
+check_appli()
+{
+    /bin/ps aux | grep -o  "$1"
+}
+
+Result=`check_appli domoCayenne`
+#long de la chaine
+lg=${#Result}
+
+if [ $lg -lt 16 ]
+then
+	if pidof domoCayenne
+	then
+		#je tue l'éventuel domoCayenne (2)
+		sudo /bin/kill $(pgrep domoCayenne)
+		sudo /bin/kill $(pgrep domoCayenne)
+		#echo "domoCayenne tuée">>/home/pi/appli.log
+	fi
+fi

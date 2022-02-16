@@ -1,0 +1,4 @@
+#!/bin/bash
+# On efface les images anterieures a 32 jours
+find /home/pi/Images/* -type f -mtime +15 -exec /bin/rm -f {} \;
+#find /home/pi/Surveillance/Wans* -type f -mtime +32 -exec /bin/rm -f {} \;

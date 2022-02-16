@@ -1,0 +1,13 @@
+#!/bin/bash 
+
+if pidof appli ; then
+	#je tue l'éventuel appli (2)
+	sudo kill -9 $(pgrep appli)
+	sudo kill -9 $(pgrep appli)
+	#echo "appli tuée">>/home/pi/appli.log
+fi
+#je relance 
+echo "$(date) On relance appli"
+#lxterminal -e sudo /home/pi/trivy/appli  2>>/home/pi/appli.log
+sudo /home/pi/trivy/appli  1>>/home/pi/domot.run
+# 1>>/home/pi/appli.run 2>>/home/pi/appli.log

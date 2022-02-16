@@ -1,0 +1,10 @@
+#!/bin/bash
+
+if pidof motion ; then
+	#je tue l'éventuel motion
+	sudo kill $(pgrep motion)
+	#echo "motion tuée">>/home/pi/motion.log
+fi
+#je relance 
+echo "$(date) On relance motion"
+sudo /usr/bin/motion

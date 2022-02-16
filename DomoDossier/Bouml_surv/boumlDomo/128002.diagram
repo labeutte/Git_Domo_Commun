@@ -1,0 +1,114 @@
+format 222
+
+deploymentnodecanvas 128002 deploymentnode_ref 128002 // Raspberry
+  xyzwh 164 10 1995 387 557
+end
+deploymentnodecanvas 128130 deploymentnode_ref 128130 // Clé 3G ou sim800
+  xyzwh 5 84 2000 105 32
+end
+deploymentnodecanvas 128258 deploymentnode_ref 128258 // Alim sauvegardée
+  xyzwh 2 223 2000 108 32
+end
+deploymentnodecanvas 128386 deploymentnode_ref 128386 // Tél / Tablette
+  xyzwh 4 310 2000 81 32
+end
+deploymentnodecanvas 128514 deploymentnode_ref 128514 // Arduino
+  xyzwh 616 101 2000 59 32
+end
+deploymentnodecanvas 128770 deploymentnode_ref 128770 // Capt température
+  xyzwh 703 102 2000 104 32
+end
+deploymentnodecanvas 128898 deploymentnode_ref 128898 // ESP8266
+  xyzwh 613 203 2000 64 32
+end
+deploymentnodecanvas 129026 deploymentnode_ref 128770 // Capt température
+  xyzwh 712 204 2000 104 32
+end
+deploymentnodecanvas 129154 deploymentnode_ref 129026 // Relai VMC
+  xyzwh 708 242 2000 70 32
+end
+deploymentnodecanvas 129282 deploymentnode_ref 129154 // Relai 433 Klaxon
+  xyzwh 611 346 2000 101 32
+end
+deploymentnodecanvas 129410 deploymentnode_ref 129282 // Capteur Ouverture 433
+  xyzwh 171 624 2000 133 31
+end
+deploymentnodecanvas 129538 deploymentnode_ref 129410 // Capteur Mouvement 433
+  xyzwh 243 689 2000 138 32
+end
+deploymentnodecanvas 129666 deploymentnode_ref 129538 // Caméra IP
+  xyzwh 392 627 2000 81 32
+end
+componentcanvas 131586 component_ref 128002 // Communication Wifi
+  
+  xyzwh 187 48 3005 143 51
+end
+componentcanvas 131714 component_ref 128130 // Communication GSM
+  
+  xyzwh 380 50 2006 143 51
+end
+componentcanvas 131842 component_ref 128258 // Serveur web
+  
+  xyzwh 187 105 2005 143 51
+end
+componentcanvas 131970 component_ref 128386 // Paramétrage et visualisation
+  
+  xyzwh 363 108 2005 169 51
+end
+componentcanvas 132098 component_ref 128514 // Detection Intrusion RF
+  
+  xyzwh 201 500 2006 143 51
+end
+componentcanvas 132226 component_ref 128642 // Detection Intrusion Caméras
+  
+  xyzwh 358 500 3005 171 51
+end
+componentcanvas 132354 component_ref 128770 // Detection coupure alim
+  
+  xyzwh 201 442 3015 143 51
+end
+componentcanvas 132482 component_ref 128898 // Paramétrage et Visualisation
+  
+  xyzwh 354 439 2006 171 51
+end
+packagecanvas 132610 
+  package_ref 128002 // Surveillance
+   color yellow  xyzwh 186 396 2000 353 165
+end
+componentcanvas 132738 component_ref 129026 // Base de Données
+  
+  xyzwh 335 239 3010 143 51
+end
+componentcanvas 132866 component_ref 129154 // Enregistrement d'évènements
+  
+  xyzwh 326 298 3015 183 51
+end
+packagecanvas 132994 
+  package_ref 128130 // Stockage
+   color yellow  xyzwh 299 197 3005 225 165
+end
+line 129922 ----
+  from ref 128002 z 2001 label "RF 433" max_width 255 xyz 234 580 3000 to ref 129410
+line 130050 ----
+  from ref 128002 z 2001 label "RF 433" max_width 255 xyz 299 696.5 3000 to ref 129538
+line 130178 ----
+  from ref 128002 z 2001 label "TCP-IP" max_width 255 xyz 405.5 582 3000 to ref 129666
+line 130306 ----
+  from ref 128130 z 2001 label "Série" max_width 255 xyz 111 126 3000 to ref 128002
+line 130434 ----
+  from ref 128258 z 2001 label "E/S TOR" max_width 255 xyz 115.5 235.5 3000 to ref 128002
+line 130562 ----
+  from ref 128386 z 2001 label "TCP-IP" max_width 255 xyz 108.5 299.5 3000 to ref 128002
+line 130690 ----
+  from ref 128002 z 2001 label "TCP-IP" max_width 255 xyz 567.5 136 3000 to ref 128514
+line 130818 ----
+  from ref 128514 z 2001 label "fils" max_width 255 xyz 681 102 3000 to ref 128770
+line 130946 ----
+  from ref 128002 z 2001 label "TCP-IP" max_width 255 xyz 565.5 217.5 3000 to ref 128898
+line 131074 ----
+  from ref 128898 z 2001 label "fils" max_width 255 xyz 686 204 3000 to ref 129026
+line 131202 ----
+  from ref 128898 z 2001 label "fils" max_width 255 xyz 684 221 3000 to ref 129154
+line 131330 ----
+  from ref 128002 z 2001 label "RF 433" max_width 255 xyz 563 326 3000 to ref 129282
+end

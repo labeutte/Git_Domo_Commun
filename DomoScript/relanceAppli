@@ -1,0 +1,21 @@
+#!/bin/bash
+
+if pidof appli
+then
+        #je tue l'éventuel appli (2)
+        sudo kill $(pgrep appli)
+        sudo kill $(pgrep appli)
+        #echo "appli tuée">>/home/pi/appli.log
+fi
+
+if pidof maingsm
+then
+        #je tue l'éventuel appli (2)
+        sudo kill $(pgrep maingsm)
+        sudo kill $(pgrep maingsm)
+        #echo "appli tuée">>/home/pi/appli.log
+fi
+#je relance 
+sudo /home/pi/Domotik/appli
+sleep 1
+pidof maingsm | sudo xargs renice -2 

@@ -1,0 +1,169 @@
+html,body
+            	{
+                  height:100%
+                  box-sizing:border-box;
+                	background:url(fond1.jpg);
+                	font-family: Courier New;
+                	color: white;
+            	}
+            	h1
+            	{
+                	text-align:center;
+                	margin-top:2%;
+                	font-size:300%;
+                	width:60%;
+                	margin-left:20%;
+  			          border-radius: 50px;
+  			          background: gray;
+  			          padding: 10px 0px 10px 0px;
+  			          border: solid #ffffff 2px;
+  			          text-decoration: none;
+            	}
+            	table
+            	{
+                	width:80%;
+                	height:50%;
+                	margin-left:10%;
+                	margin-top:2%;
+					border-collapse: separate;
+					border-spacing: 20px;
+            	}
+              tr
+              {
+                height:25%;
+                width:100%;
+              }
+            	.img
+            	{
+                	 width:15%;
+					 height:20em;
+            	}
+            	.grand,.immense,.petit
+            	{
+               		background-color:gray;
+               		position:absolute;
+               		left:0px;
+               		border-radius: 15px;
+            	}
+            	.immense
+            	{
+					position: fixed;
+            		height:96%;
+            		border: 2px solid white;
+           	    	width:80%;
+           	    	margin-left:10%;
+           	    	top:2%;
+            	}
+            	.immense img
+            	{
+            		border-radius: 25px;
+            	}
+            	.grand
+            	{
+            		height:80%;
+            		border: 2px solid white;
+           	    	width:100%;
+           	    	left:-2px;
+           	    	top:0%;
+                	text-align:center;
+            	}
+            	.petit
+            	{
+           	    	width:20%;
+           	    	height:10%;
+           	    	bottom:7%;
+           	    	left:45%;
+           	    	color:black;
+            	}
+            	.img > img
+            	{
+               		width:100%;
+               		height:100%;
+               		opacity:0.8;
+               		box-shadow: 10px 10px 10px -6px rgba(0,0,0,0.41);
+               		border: 1px solid white;
+               		border-radius: 25px;
+            	}
+            	img:hover
+            	{
+                	cursor:pointer;
+            	}
+            	.grd
+            	{
+               		max-width:100%;
+                	height:100%;
+               		opacity:1;
+					border: 1px solid white;
+            	}
+            	#bouton
+            	{
+                	width:50%;
+                	margin-left:25%;
+                	text-align:center;
+                	margin-top:2%;
+                	margin-bottom:2%;
+            	}
+              input[type=checkbox]
+ 		          {
+ 			            transform: scale(1.5);
+ 		          }
+            	input[type=checkbox]:hover
+ 		          {
+ 			            cursor:pointer;
+ 		          }
+            	input[disabled]
+		          {
+ 		 	           outline:1px solid black;
+ 		          }
+ 		button
+ 		{
+ 			width:45%;
+  			border-radius: 28px;
+  			font-size: 150%;
+  			color:white;
+  			background: gray;
+  			padding: 10px 20px 10px 20px;
+  			border: solid #ffffff 2px;
+  			text-decoration: none;
+		}
+
+		button:hover
+		{
+  			background: #3b9cd9;
+  			text-decoration: none;
+  			cursor:pointer;
+		}
+		.ferme
+		{
+			width:20px;
+			height:20px;
+			position:absolute;
+			top:1%;
+			right:1%;
+			background-color:#007399;
+			border-radius: 25px;
+			border: solid #ffffff 2px;
+			font-weight: bold;
+		}
+		.ferme:hover
+		{
+			cursor:pointer;
+		}
+    #cont
+    {
+      width:100%;
+      height:50%;
+    }
+	form
+	{
+		font-size:200%;
+		width:50%;
+		margin-left:25%;
+	}
+	input[type=text] ,input[type=submit],select
+	{
+		width:45%;
+		height:50px;
+		font-size:100%;
+		margin-left:25%;
+	}

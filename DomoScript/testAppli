@@ -1,0 +1,31 @@
+#!/bin/bash
+
+check_appli() 
+{
+    /bin/ps aux | grep -o  "$1"
+}
+
+Result=`check_appli appli`
+#long de la chaine
+lg=${#Result}
+
+if [ $lg -lt 15 ]
+then
+	if pidof appli 
+	then
+		#je tue appli et domoCayenne (2)
+		sudo /bin/kill $(pgrep appli)
+		sudo /bin/kill $(pgrep appli)
+		sudo /bin/kill $(pgrep domoCayenne)
+		sudo /bin/kill $(pgrep domoCayenne)
+		#echo "appli tuée">>/home/pi/appli.log
+	fi
+	#je relance 
+   	/bin/echo "$(date) On relance appli">>/home/pi/appli.log
+	#lxterminal -e sudo /home/pi/Domotik/appli  2>>/home/pi/appli.log
+	#sudo /home/pi/Domotik/appli  1>>/home/pi/appli.run 2>>/home/pi/domot.err
+	sudo /home/pi/Domotik/appli
+#else
+#	echo "lg = $lg ">>/home/pi/appli.err
+#  	echo "$(date) appli est UP">>/home/pi/appli.err
+fi

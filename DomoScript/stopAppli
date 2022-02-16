@@ -1,0 +1,15 @@
+#!/bin/bash 
+
+rm ../appli.run
+rm ../appli.log
+touch ../appli.run
+touch ../appli.log
+
+if pidof appli
+then
+	#je tue l'éventuel appli (2)
+	sudo kill -9 $(pgrep appli)
+	sudo kill -9 $(pgrep appli)
+	#echo "appli tuée">>/home/pi/appli.log
+fi
+ps aux |grep appli

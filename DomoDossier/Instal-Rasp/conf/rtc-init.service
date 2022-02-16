@@ -1,0 +1,10 @@
+[Unit]
+Description=RTC Clock Setup and Time Sync
+Before=cron.service
+
+[Service]
+Type=oneshot
+ExecStart=/usr/lib/systemd/scripts/rtc-setup
+
+[Install]
+WantedBy=multi-user.target
